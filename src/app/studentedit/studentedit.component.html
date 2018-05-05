@@ -1,0 +1,14 @@
+<html>
+  <head>
+      <link href="../../assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+      <div class="alert alert-info col-xs-7">
+
+  <input type="text" [(ngModel)]="stdname" value="{{data.name}}">
+ 
+  <input type="text" [(ngModel)]="stdage" value="{{data.age}}">
+  <button (click)="editstd()" class="btn btn-info">Edit</button>
+</div>
+</body>
+</html>

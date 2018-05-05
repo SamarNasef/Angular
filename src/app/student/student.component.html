@@ -1,0 +1,31 @@
+<html>
+  <head>
+      <link href="../../assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+
+<a [routerLink]="['/student','add']" class="btn btn-info" >Add Student</a>
+<br><br>
+<table class="table table-borderd">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let item of students">
+    <td>{{item._id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>
+      <a [routerLink]="['/student','edit',item._id]" class="btn btn-info" >Edit</a>
+      <a [routerLink]="['/student','details',item._id]" class="btn btn-info" >Details</a>
+      <a [routerLink]="['/student','delete',item._id]" class="btn btn-danger" >Delete</a>
+    </td>
+
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
+</body>
+</html>
